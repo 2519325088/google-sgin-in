@@ -3,6 +3,7 @@
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="1071183310171-aqa1urlm2blmofksn0rkurpkse4l557m.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
   </head>
   <body>
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
@@ -46,7 +47,7 @@
 
       window.fbAsyncInit = function() {
         FB.init({
-          appId      : '413572555717269',
+          appId      : '2530514503898739',
           cookie     : true,                     // Enable cookies to allow the server to access the session.
           xfbml      : true,                     // Parse social plugins on this webpage.
           version    : '{api-version}'           // Use this Graph API version for this call.
@@ -58,16 +59,6 @@
         });
       };
 
-      
-      (function(d, s, id) {                      // Load the SDK asynchronously
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-
-     
       function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me', function(response) {
@@ -86,8 +77,6 @@
 
   <div id="status">
   </div> 
-  <script type="text/javascript">
-  </script>
   </center>
 </body>
 </html>
